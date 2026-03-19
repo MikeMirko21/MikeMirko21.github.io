@@ -47,17 +47,6 @@
       isolation: isolate;
     }
 
-    .page::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background:
-        radial-gradient(circle at 0% 0%, rgba(242, 193, 79, 0.12), transparent 55%),
-        radial-gradient(circle at 100% 0%, rgba(111, 178, 255, 0.12), transparent 55%);
-      opacity: 0.9;
-      z-index: -1;
-    }
-
     header {
       padding: 40px 32px 32px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
@@ -151,45 +140,10 @@
       font-weight: 600;
     }
 
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 32px rgba(242, 193, 79, 0.6);
-    }
-
     .btn-ghost {
       background: rgba(255, 255, 255, 0.02);
       color: var(--text-main);
       border: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .btn-ghost:hover {
-      background: rgba(255, 255, 255, 0.06);
-      transform: translateY(-1px);
-    }
-
-    .hero-badge {
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(0, 0, 0, 0.35);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      font-size: 12px;
-      color: var(--text-soft);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .hero-badge span.icon {
-      width: 22px;
-      height: 22px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 0%, #ffffff, #f2c14f);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: #2b2108;
-      font-size: 13px;
-      box-shadow: 0 0 16px rgba(242, 193, 79, 0.7);
     }
 
     main {
@@ -207,20 +161,6 @@
       box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
       position: relative;
       overflow: hidden;
-    }
-
-    section::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), transparent 40%);
-      opacity: 0.7;
-      pointer-events: none;
-    }
-
-    section > * {
-      position: relative;
-      z-index: 1;
     }
 
     .section-header {
@@ -259,101 +199,6 @@
       font-style: italic;
     }
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 12px;
-      margin-top: 8px;
-    }
-
-    .photo-card {
-      position: relative;
-      border-radius: 14px;
-      overflow: hidden;
-      background: radial-gradient(circle at top, #2a3558, #151a2b);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      min-height: 120px;
-      display: flex;
-      align-items: flex-end;
-      padding: 10px;
-      cursor: default;
-      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition);
-    }
-
-    .photo-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 55%);
-      opacity: 0.9;
-      pointer-events: none;
-    }
-
-    .photo-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.55);
-      border-color: rgba(242, 193, 79, 0.6);
-      background: radial-gradient(circle at top, #36426a, #151a2b);
-    }
-
-    .photo-label {
-      position: relative;
-      z-index: 1;
-      color: var(--white);
-      font-size: 13px;
-      font-weight: 500;
-    }
-
-    .photo-tag {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      z-index: 1;
-      font-size: 11px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: rgba(0, 0, 0, 0.55);
-      color: var(--accent-soft);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-
-    .photo-1 {
-      background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("https://images.pexels.com/photos/3770580/pexels-photo-3770580.jpeg?auto=compress&cs=tinysrgb&w=800");
-      background-size: cover;
-      background-position: center;
-    }
-
-    .photo-2 {
-      background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("https://images.pexels.com/photos/1648374/pexels-photo-1648374.jpeg?auto=compress&cs=tinysrgb&w=800");
-      background-size: cover;
-      background-position: center;
-    }
-
-    .photo-3 {
-      background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("https://images.pexels.com/photos/3770581/pexels-photo-3770581.jpeg?auto=compress&cs=tinysrgb&w=800");
-      background-size: cover;
-      background-position: center;
-    }
-
-    .photo-4 {
-      background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("https://images.pexels.com/photos/3770595/pexels-photo-3770595.jpeg?auto=compress&cs=tinysrgb&w=800");
-      background-size: cover;
-      background-position: center;
-    }
-
-    .photo-5 {
-      background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("https://images.pexels.com/photos/3770594/pexels-photo-3770594.jpeg?auto=compress&cs=tinysrgb&w=800");
-      background-size: cover;
-      background-position: center;
-    }
-
-    .photo-6 {
-      background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("https://images.pexels.com/photos/3770590/pexels-photo-3770590.jpeg?auto=compress&cs=tinysrgb&w=800");
-      background-size: cover;
-      background-position: center;
-    }
-
     .surprise-layout {
       display: grid;
       grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
@@ -369,34 +214,6 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
-    }
-
-    .card-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--accent-soft);
-    }
-
-    .card-text {
-      font-size: 13px;
-      color: var(--text-soft);
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 4px;
-    }
-
-    .pill {
-      font-size: 11px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      color: var(--text-soft);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
     }
 
     footer {
@@ -428,39 +245,13 @@
     }
 
     @media (max-width: 720px) {
-      header {
-        padding: 28px 20px 22px;
-      }
-
-      main {
-        padding: 18px 20px 22px;
-      }
-
-      footer {
-        padding: 14px 20px 18px;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
       .surprise-layout {
         grid-template-columns: 1fr;
       }
-
-      .hero-top {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hero-badge {
-        align-self: flex-start;
-      }
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
   </style>
 </head>
+
 <body>
   <div class="page">
     <header>
@@ -479,8 +270,8 @@
               <span>Leggi il mio messaggio</span>
               <span>↘</span>
             </a>
-            <a href="#ricordi" class="btn btn-ghost">
-              <span>Guarda i ricordi</span>
+            <a href="#sorpresa" class="btn btn-ghost">
+              <span>Vai alla sorpresa</span>
             </a>
           </div>
         </div>
@@ -513,68 +304,42 @@ in tutto ciò che faccio.
         </div>
       </section>
 
-      <section id="ricordi">
-        <div class="section-header">
-          <h2 class="section-title">Galleria dei ricordi</h2>
-          <div class="section-subtitle">Momenti che porto con me</div>
-        </div>
-        <div class="gallery-grid">
-          <div class="photo-card photo-1">
-            <div class="photo-tag">Noi due</div>
-            <div class="photo-label">Un momento solo nostro</div>
-          </div>
-          <div class="photo-card photo-2">
-            <div class="photo-tag">Sorrisi</div>
-            <div class="photo-label">Un sorriso che non dimentico</div>
-          </div>
-          <div class="photo-card photo-3">
-            <div class="photo-tag">Insieme</div>
-            <div class="photo-label">Una giornata semplice, ma speciale</div>
-          </div>
-          <div class="photo-card photo-4">
-            <div class="photo-tag">Famiglia</div>
-            <div class="photo-label">Il calore di casa con te</div>
-          </div>
-          <div class="photo-card photo-5">
-            <div class="photo-tag">Ricordo</div>
-            <div class="photo-label">Un abbraccio che vale più di mille parole</div>
-          </div>
-          <div class="photo-card photo-6">
-            <div class="photo-tag">Cuore</div>
-            <div class="photo-label">Un istante che porto sempre con me</div>
-          </div>
-        </div>
-      </section>
-
       <section id="sorpresa">
         <div class="section-header">
           <h2 class="section-title">Una sorpresa per te</h2>
           <div class="section-subtitle">Un piccolo regalo digitale</div>
         </div>
+
         <div class="surprise-layout">
+
+          <!-- LETTERA -->
           <div class="card-soft">
             <div class="card-title">Una lettera solo per te</div>
             <div class="card-text">
               Ho raccolto in una lettera quello che a volte faccio fatica a dire a voce.
               Puoi leggerla con calma, quando vuoi, sapendo che ogni parola viene dal cuore.
             </div>
-            <div class="pill-row">
-              <span class="pill">Gratitudine</span>
-              <span class="pill">Ricordi</span>
-              <span class="pill">Cuore</span>
-            </div>
           </div>
+
+          <!-- PLAYLIST CON AUDIO -->
           <div class="card-soft">
             <div class="card-title">La nostra colonna sonora</div>
             <div class="card-text">
-              Ho preparato anche una playlist con canzoni che mi fanno pensare a te,
+              Ho preparato una canzone che mi fa pensare a noi,
               ai viaggi, alle risate e ai momenti in cui bastava uno sguardo per capirci.
             </div>
-            <div class="pill-row">
-              <span class="pill">Playlist</span>
-              <span class="pill">Ricordi</span>
-            </div>
+
+            <!-- Bottone per riprodurre la canzone -->
+            <button onclick="document.getElementById('song1').play()" class="btn btn-primary" style="margin-top:10px;">
+              ▶ Ascolta "Come Nelle Favole"
+            </button>
+
+            <!-- Player audio nascosto -->
+            <audio id="song1">
+              <source src="Come Nelle Favole.mp3" type="audio/mpeg">
+            </audio>
           </div>
+
         </div>
       </section>
     </main>
@@ -588,3 +353,5 @@ in tutto ciò che faccio.
     </footer>
   </div>
 </body>
+</html>
+
